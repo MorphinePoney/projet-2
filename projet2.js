@@ -34,22 +34,24 @@ let questions = [questionun, questiondeux, questiontrois, questionquatre, questi
 for (let i = 0; i < questions.length; i++) {
     console.log(questions[i].sentence)
 
-
-
     for (let a = 0; a < questions[i].answer.length; a++) {
         console.log(questions[i].answer[a]);
     }
     demande = prompt("Votre réponse")
-
 
     while (demande != "A" && demande != "B" && demande != "C" && demande != "D") {
         demande = prompt("Tu t'es trompé les réponses possibles sont A B C D")
     }
     if (demande == questions[i].goodanswer) {
         bonnereponse++
+        console.log("Bonne réponse");
+        
+    }else{
+        console.log("Mauvaise réponse");
+        
     }
 
-} console.log("Votre score est " + bonnereponse);
+} console.log("Votre score est " + bonnereponse + "/"  + questions.length);
 
 
 
